@@ -19,29 +19,33 @@ numberDogs = 0
 
 # EXAMPLE: print the result of the comparison: is number_seachers greater than number_students?
 puts "Is number_teachers greater than number_students?", number_teachers > number_students
-# this should print: "Is numberTeachers greater than numberStudents?" false
+# this should print: "Is number_Teachers greater than numberStudents?" false
 
 # YOU DO: print the result of the comparison: is number_teachers less than number_students?
 # this should print: true
+number_teachers < number_students
+
 
 # YOU DO: print the result of the comparison: is number_teachers equal to string_teachers?
 # this should print: false
+number_teachers == string_teachers
 
 # YOU DO: print the result of the comparison: is number_teachers not equal to number_students?
 # this should print: true
+number_teachers != number_students
 
 # YOU DO: print the result of the comparison: is number_students greater than or equal to 20?
 # this should print: true
-
+number_students >= 20
 # YOU DO: print the result of the comparison: is number_students greater than or equal to 21?
 # this should print: false
-
+number_students >= 21
 # YOU DO: print the result of the comparison: is number_students less than or equal to 20?
 # this should print: true
-
+number_students <= 20
 # YOU DO: print the result of the comparison: is number_students less than or equal to 21?
 # this should print: true
-
+number_students <= 21
 
 #-------------------
 # PART 2: Articulating what you are doing
@@ -53,21 +57,28 @@ puts "Is number_teachers greater than number_students?", number_teachers > numbe
 # Make sure YOU can explain it that way!
 
 puts 4 < 9
-#YOU DO: Explain.
+# This line of code is asking if 4 is less than 9. 
+# This should print: true
 
 books = 3
 puts 4 < books
-# YOU DO: Explain.
+# the first line of code is assigning an integer value to a variable labeled books. 
+# The second line of code is asking whether 4 is less than the integer value assigned to the variable labeled books.
+# this should print: false
 
 friends = 6
 siblings = 2
 puts friends > siblings
-# YOU DO: Explain.
+# the first two lines of code are assigning two integer values to their respective variables named friends and siblings.
+# the third line of code is asking whether the integer value stored in the variable friends is greater than the value stored in the variable siblings.
+# this should print: true
 
 attendees = 9
 meals = 8
 puts attendees != meals
-# YOU DO: Explain.
+# the first two lines of code are assigning two integer values to their respective variables named attendees and meals.
+# the third line of code is asking whether the value stored in the variable attendees is NOT equal to the value stored in the variable meals.
+# this should print: true
 
 
 #-------------------
@@ -90,15 +101,21 @@ age = 1
 
 # YOU DO:
 # Determine if the dog loves to play and loves treats
-
+puts loves_to_play && loves_treats
 
 # Determine if the dog loves to play and loves the dog park
-
+puts loves_to_play && loves_dog_park
 
 # Determine if the dog loves to play or loves the dog park
-
+puts loves_to_play || loves_dog_park
 
 # Determine if the dog loves to play and is a puppy
-
+if loves_to_play && age <= 1
+    puts "You've got one playful puppy!"
+else
+    puts "Your dog is either too old or too grumpy. Go find yourself a playful puppy!"
+end
 # What did your final line of code evaluate to? Why do you think that is? Explain.
-# ANSWER:
+# ANSWER: The determination for whether the dog loves to play and is a puppy came back as "You've got one playful puppy!"
+# This is because I made an arbitrary determination that if a dog's age is less than or equal to 1 they qualify as puppy status in my eyes.
+# Since the dog's age was assigned a value less than or equal to 1 and because the variable loves_to_play was assigned as true, an affirmative response came back instead of the negative response.
